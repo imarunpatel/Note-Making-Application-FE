@@ -7,7 +7,9 @@
           <h3 style="color: red">{{errorMsg}}</h3>
         </div>
         <mat-spinner *ngIf="isLoading"></mat-spinner>
+        
         <form *ngIf="!isLoading" class="m-3" [formGroup]="loginForm">
+          
           <div class="form-group">
             <input
               id="email"

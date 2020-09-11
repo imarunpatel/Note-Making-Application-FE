@@ -45,7 +45,6 @@ export class StudentDashboardComponent implements OnInit, OnDestroy {
   userProfile() {
     this.userProfileSub = this.authService.getProfile().subscribe(
       (response:any) =>{
-        console.log(response);
         this.studentName = response.data.name;
         this.studentEmail = response.data.email;
         this.studentId = response.data._id;
@@ -61,7 +60,6 @@ export class StudentDashboardComponent implements OnInit, OnDestroy {
           if(this.studentId == item.student._id)
             this.studentNote = item;
         })
-        console.log(this.studentNote);
       }
     )
   }

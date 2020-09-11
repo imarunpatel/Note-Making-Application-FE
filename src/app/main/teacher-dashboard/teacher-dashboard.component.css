@@ -14,3 +14,9 @@
     height:300px;
     display:block;
  } */
+
+ mat-card {
+     width: 30%;
+     float: left;
+     background-color: #857a9e;
+ }
