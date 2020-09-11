@@ -50,13 +50,13 @@ export class SignupComponent implements OnInit {
   }
 
   get f() { return this.signupForm.controls; }
-
+ 
   onSignup() {
     this.validationCheck = true;
-    this.isLoading = true;
     if(this.signupForm.invalid) {
       return;
     }
+    this.isLoading = true;
     this.authService.registerUser(this.signupForm.value);
 
   }

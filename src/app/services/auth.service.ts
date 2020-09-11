@@ -71,11 +71,13 @@ export class AuthService {
     const api = authUrl + '/register/';
     return this.http.post(api, data).subscribe(
       (response: any) => {
+        console.log('after response')
         this.token = response.token;
         let token = response.token;
         if (token) {
           this.isAuthenticated = true;
           localStorage.setItem('token', token);
+          this.authStatusListener.next(true);
         }
         this.isLoading.next(false);
         this.router.navigate(['studentDashboard'])
@@ -85,6 +87,7 @@ export class AuthService {
         this.errorMsg.next(msg)
         this.isLoading.next(false);
         this.router.navigate(['signup'])
+        console.log('in error')
       }
     )
   }
