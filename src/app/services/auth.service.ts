@@ -22,9 +22,13 @@ export class AuthService {
       private router: Router
     ) { }
 
-    getAuthStatusListener() {
-      return this.authStatusListener.asObservable();
-    }
+  getAuthStatusListener() {
+    return this.authStatusListener.asObservable();
+  }
+
+  getIsAuth() {
+    return this.isAuthenticated;
+  }
 
   login(email: string, password: string) {
     const api = authUrl + '/login/'
