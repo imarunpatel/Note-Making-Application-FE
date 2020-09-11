@@ -21,7 +21,6 @@ export class TeacherDashboardComponent implements OnInit {
   getNotes() {
     this.notesService.getNotes().subscribe(
       (data:any) => {
-        console.log(data);
         this.notesData = data.data;
         this.submittedStudentNo = data.length;
       }
