@@ -9,11 +9,10 @@
     right: 0px;
 }
 
-/* table{
-    overflow-x:scroll;
-    height:300px;
-    display:block;
- } */
+.card {
+    width: 100%;
+    min-height: 30vh;
+}
 
  mat-card {
      width: 30%;
