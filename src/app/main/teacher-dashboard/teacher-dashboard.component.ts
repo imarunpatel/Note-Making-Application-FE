@@ -35,4 +35,8 @@ export class TeacherDashboardComponent implements OnInit {
     )
   }
 
+  onRefresh() {
+    this.getNotes();
+  }
+
 }
