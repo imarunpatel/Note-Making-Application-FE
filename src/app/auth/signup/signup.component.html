@@ -1,0 +1,65 @@
+<div class="container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <div class="row" *ngIf="!isLoading">
+      <div class="login-main">
+          <h3>SignUp</h3>
+          <h3 style="color: red">{{errMsg}}</h3>
+        <form class="m-3" [formGroup]="signupForm">
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              placeholder="Name"
+              required
+            >
+            <div *ngIf="validationCheck && f.name.invalid" class="alert alert-danger">
+              <div *ngIf="f.name.errors.required">Name is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="class"
+              class="form-control"
+              placeholder="Class - Choose between (1 to 10)"
+              required
+            >
+            <div *ngIf="validationCheck && f.name.invalid" class="alert alert-danger">
+              <div *ngIf="f.name.errors.required">Class is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              required
+            >
+          </div>
+            <div *ngIf="validationCheck && f.email.invalid" class="alert alert-danger">
+                <div *ngIf="f.email.errors.required">Email name is required.</div>
+            </div>
+          <div class="for-group">
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              placeholder="password"
+              required
+            >
+            <div *ngIf="validationCheck && f.password.invalid" class="alert alert-danger">
+              <div *ngIf="f.password.errors.required">Please enter your password.</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 5 char long.</div>
+            </div>
+          </div>
+          <button class="btn btn-info mt-3" (click)="onSignup()">SignUp</button>
+        </form>
+        <br>
+        <div class="l-text"><p class="">Already have an Account ! <a routerLink="../login">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

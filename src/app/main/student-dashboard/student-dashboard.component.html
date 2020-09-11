@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="user-profile">
+                <h1>Hello {{studentName}}</h1>
+                <h5>{{studentEmail}}</h5>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="dashboard">
+               
+                <h1>Submit Notes Here:</h1>
+                <div class="text-center">
+                    <p style="color: blue;">{{errMsg}}</p>
+                </div>
+                <div class="spinner">
+                    <mat-spinner *ngIf="isLoading"></mat-spinner>
+                </div>
+                <form [formGroup]="noteForm" *ngIf="!isLoading">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Title</label>
+                        <input formControlName="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Text</label>
+                        <textarea formControlName="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" (click)="onSubmitNotes()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

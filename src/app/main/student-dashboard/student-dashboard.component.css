@@ -1,0 +1,43 @@
+.dashboard {
+    padding: 20px;
+    min-width:60%;
+    min-height:60%;
+    margin: auto;
+    margin-top: 30vh;
+    margin-bottom: 40vh;
+    border: 1px solid #fff;
+    /*background-color: rgba(234, 132, 233, 0.76);*/
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+    padding: 20px;
+    min-width:60%;
+    min-height:60%;
+    margin: auto;
+    margin-top: 30vh;
+    margin-bottom: 40vh;
+    border: 1px solid #fff;
+    /*background-color: rgba(234, 132, 233, 0.76);*/
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard form button {
+    float: right;
+}
+
+.spinner {
+    margin-left: 50%;
+}
