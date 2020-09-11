@@ -2,8 +2,16 @@
     <div class="row">
         <div class="col-md-4">
             <div class="user-profile">
-                <h1>Hello {{studentName}}</h1>
-                <h5>{{studentEmail}}</h5>
+                <h1>Welcome {{studentName}} ..!</h1>
+                <h3>Your Details: </h3>
+                <hr>
+                <ul>
+                    <li>Email: {{studentEmail}}</li>
+                    <li>Class: XX</li>
+                    <li>Address: Delhi</li>
+                    <li>Contact: +91-9682030XXX</li>
+                </ul>
+                <h5></h5>
             </div>
         </div>
         <div class="col-md-8">
@@ -28,6 +36,13 @@
                     
                     <button type="submit" class="btn btn-primary" (click)="onSubmitNotes()">Submit</button>
                 </form>
+                
+                <div class="note-detal">
+                    <h1>Your Submmited Note:</h1>
+                    <h3><b>{{studentNote?.title}}</b></h3>
+                    <hr>
+                    <p>{{studentNote?.text}}</p>
+                </div>
             </div>
         </div>
     </div>

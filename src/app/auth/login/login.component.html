@@ -1,12 +1,13 @@
 <div class="container">
-  <mat-spinner *ngIf="isLoading"></mat-spinner>
-    <div class="row" *ngIf="!isLoading">
+  
+    <div class="row" >
       <div class="login-main" >
         <div class="login-image">
           <h3>Login Here</h3>
           <h3 style="color: red">{{errorMsg}}</h3>
         </div>
-        <form class="m-3" [formGroup]="loginForm">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <form *ngIf="!isLoading" class="m-3" [formGroup]="loginForm">
           <div class="form-group">
             <input
               id="email"

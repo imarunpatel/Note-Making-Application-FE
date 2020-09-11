@@ -17,8 +17,10 @@ export class StudentDashboardComponent implements OnInit, OnDestroy {
   userProfileSub : Subscription;
   onSubmitNoteSub: Subscription;
 
+  studentId;
   studentName;
   studentEmail;
+  studentNote;
   
   constructor(
       private fb: FormBuilder,
@@ -39,11 +41,27 @@ export class StudentDashboardComponent implements OnInit, OnDestroy {
     this.userProfile();
   } 
 
+  
   userProfile() {
     this.userProfileSub = this.authService.getProfile().subscribe(
       (response:any) =>{
+        console.log(response);
         this.studentName = response.data.name;
         this.studentEmail = response.data.email;
+        this.studentId = response.data._id;
+        this.getStudentNotes();
+      }
+    )
+  }
+
+  getStudentNotes() {
+    this.notesService.getNotes().subscribe(
+      (response: any) => {
+        response.data.forEach(item => {
+          if(this.studentId == item.student._id)
+            this.studentNote = item;
+        })
+        console.log(this.studentNote);
       }
     )
   }

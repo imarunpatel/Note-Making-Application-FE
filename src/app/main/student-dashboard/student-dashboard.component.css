@@ -1,12 +1,12 @@
 .dashboard {
     padding: 20px;
     min-width:60%;
-    min-height:60%;
+    height: 480px;
     margin: auto;
-    margin-top: 30vh;
-    margin-bottom: 40vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     border: 1px solid #fff;
-    /*background-color: rgba(234, 132, 233, 0.76);*/
+    background-color: #d4c19b;
     border-radius: 0px;
     overflow: hidden;
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -19,13 +19,12 @@
 .user-profile {
     padding: 20px;
     min-width:60%;
-    min-height:60%;
+    height: 300px;
     margin: auto;
-    margin-top: 30vh;
-    margin-bottom: 40vh;
+    margin-top: 10vh;
     border: 1px solid #fff;
-    /*background-color: rgba(234, 132, 233, 0.76);*/
-    border-radius: 0px;
+    background-color:#968257;
+    border-radius: 7px;
     overflow: hidden;
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -40,4 +39,9 @@
 
 .spinner {
     margin-left: 50%;
+}
+
+
+.note-detal {
+    height: 80px;
 }
